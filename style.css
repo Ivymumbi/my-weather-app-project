@@ -2,18 +2,6 @@ body {
   background-color: white;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-img {
-  width: 100vw;
-  height: 100vh;
-
-  object-fit: cover;
-  object-position: center;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
 
 .weatherApp {
   background-color: #e11d7f;
