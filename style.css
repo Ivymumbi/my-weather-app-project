@@ -1,6 +1,6 @@
 body {
   background-color: white;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .weatherApp {
@@ -57,9 +57,9 @@ main {
 }
 .current-icon {
   position: relative;
-  top: -8px;
-  font-size: 40px;
-  margin-right: 10px;
+  top: 18px;
+  width: 99px;
+  height: 90px;
 }
 
 .current-value {
@@ -70,5 +70,5 @@ main {
 .current-unit {
   font-size: 30px;
   position: relative;
-  top: -15px;
+  top: -20px;
 }
