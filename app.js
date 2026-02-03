@@ -1,20 +1,27 @@
 function displayTemperature(response) {
   let temperature = document.querySelector("#current-value");
   temperature.innerHTML = Math.round(response.data.temperature.current);
+  let cityElement = document.querySelector("#current-city");
+  cityElement.innerHTML = response.data.city;
 }
+function searchCity(city) {
+  let apiKey = "f1fc0cc94o4ea1c9e211223ba7t05bc1";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");
   let cityElement = document.querySelector("#current-city");
-  let city = searchInputElement.value;
-  let apiKey = "f1fc0cc94o4ea1c9e211223ba7t05bc1";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayTemperature);
-  cityElement.innerHTML = city;
+
+  searchCity(searchInputElement.value);
 }
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
+
+searchCity("Nairobi");
 
 let days = [
   "Sunday",
