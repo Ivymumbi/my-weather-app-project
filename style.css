@@ -99,3 +99,12 @@ main {
 .weather-forecast-temperature {
   padding: 0 10px;
 }
+.weather-forecast-card {
+  background-color: rgba(126, 7, 106, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  width: 120px;
+  box-shadow: 0 4px 8px rgba(44, 1, 37, 0.1);
+  margin: 5px;
+}
